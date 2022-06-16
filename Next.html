@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IND BULLS</title>
+    <link rel="stylesheet" href="style1.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  </head>
+  <body>
+    
+    <div class="container">
+      <header>Next Level</header>
+      <div class="progress-bar">
+        <div class="step">
+          <p>1</p>
+          <div class="bullet">
+            <span>1</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>2</p>
+          <div class="bullet">
+            <span>2</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>3</p>
+          <div class="bullet">
+            <span>3</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+        <div class="step">
+          <p>4</p>
+          <div class="bullet">
+            <span>4</span>
+          </div>
+          <div class="check fas fa-check"></div>
+        </div>
+      </div>
+      <div class="form-outer">
+        <form action="#" method="post" name="google-sheet">
+          <div class="page slide-page">
+            <div class="title">Basic Info:</div>
+            <div class="field">
+              <div class="label">Full Name</div>
+              <input type="text" placeholder="Full Name" required name="Full Name">
+            </div>
+            <div class="field">
+              <div class="label">Team Name</div>
+              <input type="text" placeholder="Team Name" required name="Team Name">
+            </div>
+            <div class="field">
+              <button class="firstNext next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Contact Info:</div>
+            <div class="field">
+              <div class="label">Email Address</div>
+              <input type="text" placeholder="Email Address" required name="Email Address">
+            </div>
+            <div class="field">
+              <div class="label">Whatapp Number</div>
+              <input type="Number" placeholder="Whatapp Number" required name="Whatapp Number" >
+            </div>
+            <div class="field btns">
+              <button class="prev-1 prev">Previous</button>
+              <button class="next-1 next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Team IGL Info:</div>
+            <div class="field">
+              <div class="label">IGL In Game Name</div>
+              <input type="text"  placeholder="IGL In Game Name" required name="IGL In Game Name">
+            </div>
+            <div class="field">
+              <div class="label">IGL In Game  ID</div>
+              <input type="number" placeholder="IGL In Game  ID" required name="IGL In Game  ID">
+            </div>
+            <div class="field btns">
+              <button class="prev-2 prev">Previous</button>
+              <button class="next-2 next">Next</button>
+            </div>
+          </div>
+
+          <div class="page">
+            <div class="title">Team Achievement :</div>
+            <div class="field">
+              <div class="label">Discord Tag</div>
+              <input type="text" placeholder="Discord Tag" required name="Discord Tag">
+            </div>
+
+            
+            
+            
+
+            <div class="field btns">
+              <button class="prev-3 prev">Previous</button>
+              <button class="submit" input type="submit" value="submit" name="submit">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script1.js"></script>
+    <script>
+      const scriptURL ='https://script.google.com/macros/s/AKfycby1XVJRMJn4VKgVHOmHFbC-1BMuihgwnHv09qXzCdGF0e4vEgQAFFRhkfYy2yLFhUgzIw/exec'
+      const form = document.forms['google-sheet']
+    
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+          .catch(error => console.error('Error!', error.message))
+      })
+    </script>
+
+
+
+
+  </body>
+</html>

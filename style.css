@@ -24,6 +24,7 @@
   height: 70px;
   align-items: center;
   justify-content: space-between;
+  background: #171c24;
 }
 
 nav .content{
@@ -413,4 +414,22 @@ html,body{
 .wrapperi .youtube:hover .tooltip,
 .wrapperi .youtube:hover .tooltip:before{
   background: #DE463B;
+}
+button{
+  width:270px ;
+  height: 80px;
+  border: 0;
+  outline: none;
+  background: #46C1F6;
+  color: #fff;
+  font-size: 22px;
+  border-radius: 40px;
+  text-align: center;
+  box-shadow: 0 6px 20px -5px rgba(0,0,0,0.4);
+  overflow: hidden;
+  cursor: pointer;
+}
+button:hover{
+  background: #DE463B;
+
 }
